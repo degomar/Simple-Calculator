@@ -1,18 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/bg_calculator"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/calc_result"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:padding="10dp"
+        android:text="1=1!"
+        android:gravity="bottom|right"
+        android:textSize="40sp"
+        android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/process_calc"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:text="1=1!"
+            android:gravity="bottom|right"
+            android:textSize="70sp"
+            android:textColor="@color/white"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number7"
+            android:text="7"
+            style="@style/style_number"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number8"
+            android:text="8"
+            style="@style/style_number"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number9"
+            android:text="9"
+            style="@style/style_number" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_bar"
+            android:text="/"
+            style="@style/style_digits"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number4"
+            android:text="4"
+            style="@style/style_number"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number5"
+            android:text="5"
+            style="@style/style_number"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number6"
+            android:text="9"
+            style="@style/style_number" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_plus"
+            android:text="+"
+            style="@style/style_digits"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number1"
+            android:text="1"
+            style="@style/style_number"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number2"
+            android:text="2"
+            style="@style/style_number"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number3"
+            android:text="3"
+            style="@style/style_number" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_minus"
+            android:text="-"
+            style="@style/style_digits"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/number0"
+            android:text="0"
+            style="@style/style_number"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_comma"
+            android:text=","
+            style="@style/style_digits"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_equals"
+            android:text="="
+            style="@style/style_digits" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_mutiplication"
+            android:text="x"
+            style="@style/style_digits"/>
+    </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
+</layout>
