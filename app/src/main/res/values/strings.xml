@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Calculator</string>
+    <string name="dot_btn">.</string>
+    <string name="equals_btn">=</string>
+    <string name="divided_dot">/</string>
+    <string name="plus_btn">+</string>
+    <string name="less_btn">-</string>
 </resources>

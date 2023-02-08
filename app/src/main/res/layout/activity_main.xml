@@ -21,8 +21,8 @@
         android:padding="10dp"
         android:text=""
         android:gravity="bottom|right"
-        android:textSize="40sp"
-        android:textColor="@color/white" />
+        android:textSize="30sp"
+        android:textColor="#CBFFFFFF" />
 
         <TextView
             android:id="@+id/process_calc"
@@ -81,7 +81,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_bar"
-            android:text="/"
+            android:text="@string/divided_dot"
             style="@style/style_digits"/>
     </LinearLayout>
 
@@ -103,12 +103,12 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/number6"
-            android:text="9"
+            android:text="6"
             style="@style/style_number" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_plus"
-            android:text="+"
+            android:text="@string/plus_btn"
             style="@style/style_digits"/>
     </LinearLayout>
 
@@ -135,7 +135,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_minus"
-            android:text="-"
+            android:text="@string/less_btn"
             style="@style/style_digits"/>
     </LinearLayout>
 
@@ -151,14 +151,15 @@
             style="@style/style_number"/>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_comma"
-            android:text=","
+            android:id="@+id/btn_dot"
+            android:text="@string/dot_btn"
+            android:onClick="onDot"
             style="@style/style_digits"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_equals"
-            android:text="="
-            style="@style/style_digits" />
+            android:text="@string/equals_btn"
+            style="@style/style_equals" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_mutiplication"
