@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         lastDot = false
         lastNumber = true
         Toast.makeText(this, "clicou", Toast.LENGTH_LONG).show()
-
     }
 
     fun onClear(view: View) {
@@ -57,6 +56,7 @@ class MainActivity : AppCompatActivity() {
             var firstValueSplited : String? = null
             var secondValueSplited: String? = null
 
+
             if (tvValueString.startsWith("-")){
                 prefix = "-"
                 tvValueString.substring(1)
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                     firstValueSplited = prefix + firstValueSplited
                 }
 
-                resultSplits = firstValueSplited.toDouble() - secondValueSplited.toDouble()
+                resultSplits = (firstValueSplited.toDouble() - secondValueSplited.toDouble())
             } else if (tvValueString.contains("+")) {
                 var valueSplited = tvValueString.split("+")
                 firstValueSplited = valueSplited[0]
@@ -102,9 +102,10 @@ class MainActivity : AppCompatActivity() {
 
                 resultSplits = firstValueSplited.toDouble() * secondValueSplited.toDouble()
             }
+            var resultString = isRemoveZero(resultSplits.toString())
 
             binding.calcResult?.text = tvValueString
-            binding.processCalc?.text = resultSplits?.toString()
+            binding.processCalc?.text = resultString
 
 
 
@@ -121,6 +122,14 @@ class MainActivity : AppCompatActivity() {
                 lastNumber = false
             }
         }
+    }
+
+    fun isRemoveZero(result: String) : String{
+        var value = result
+        if (result.contains(".0")) {
+            value = result.substring(0, result.length - 2)
+        }
+        return value
     }
 
     fun insOperatorIsAdded(value: String): Boolean {
